@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+//Basic background worker for updating on a seperate thread
+
 namespace NetworkGUI.Forms
 {
     public partial class PIF_Progress : Form
