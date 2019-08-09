@@ -56,6 +56,7 @@ namespace Network
                 obj[i] = startValue + i;
         }
 
+
         public static void Iota(IIndexable<string> obj, int startValue)
         {
             for (int i = 0; i < obj.Length; ++i)

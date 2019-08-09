@@ -30,7 +30,7 @@ namespace NetworkGUI
         CliqueForm _overlapCommForm = new CliqueForm(); // new for overlap communities
         DichotomizeForm _dichotomizeForm = new DichotomizeForm(); // new for dichotomize
         RecodeForm _recodeForm = new RecodeForm(); // new for recode
-
+       
         public OptionsForm _optionsForm = new OptionsForm();
         MultiplicationForm _multiplicationForm = new MultiplicationForm();
         BlocForm _blocForm = new BlocForm();

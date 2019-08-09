@@ -1,1 +1,1 @@
-# MaozNetCurrent
+# MaozNet_Randomization

@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="NetworkGUI.exe.manifest" size="4292">
+    <dependentAssembly dependencyType="install" codebase="NetworkGUI.exe.manifest" size="4294">
       <assemblyIdentity name="NetworkGUI.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>W/ayOcw67foRXR056IsyKQ4SM4ZYax0tp6C0t+nRBao=</dsig:DigestValue>
+        <dsig:DigestValue>OAxo4mTYspGMrAJy/ZVwvRBmSkEJxnER4ETtOr4LGw8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
