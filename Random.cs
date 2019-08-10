@@ -24,7 +24,8 @@ namespace RandomUtilities
 
         private static RNG Create()
         {
-            Random r = new Random();
+            //Random r = new Random();
+            Random r = new Random(Guid.NewGuid().GetHashCode());
             return new RNG((uint)r.Next(), (uint)r.Next(), (uint)r.Next(), (uint)r.Next());
         }
 
@@ -92,7 +93,32 @@ namespace RandomUtilities
         {
             return collection[RandomInt(collection.Length)];
         }
-        
+
+        // Return a full/partial permutaton of an integer array
+        // C(m, n)
+        public static List<int> permutation(int m, int n)
+        {
+            List<int> pool = null;
+            List<int> permute = null;
+            int draw;
+            if (!(m > 0 && n >= m))
+            {
+                throw new Exception("Invalid input values!");
+            }
+
+            for (int i = 0; i < n; i++)
+            {
+                pool.Add(i);
+            }
+            for (int i = 0; i < m; i++)
+            {
+                draw = RNG.RandomInt(n - 1 - i);
+                permute.Add(pool[draw]);
+                pool.RemoveAt(draw);
+            }
+            return permute;
+        }
+
         // These methods implement the above
         private uint znew()
         {
