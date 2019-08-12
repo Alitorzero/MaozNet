@@ -42,6 +42,20 @@ namespace NetworkGUI
             this.valuedRandomMatrixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vsymmetricToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vnonSymmetricToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+
+            // Yushan
+            // Global Randomization 
+            this.globalRandomMatrixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.directedGlobalRandomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.undirectedGlobalRandomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            //
+            // Configuration Models
+            this.configureModelMatrixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.directedConfigureModelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.undirectedConfigureModelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            //
+            //
+
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dyadicFileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.matrixFileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -279,9 +293,14 @@ namespace NetworkGUI
             this.affiliationFileToolStripMenuItem,
             this.monadicDiagonalFileToolStripMenuItem,
             this.randomMatrixToolStripMenuItem,
-            this.valuedRandomMatrixToolStripMenuItem});
+            this.valuedRandomMatrixToolStripMenuItem,
+                //Yushan
+            this.globalRandomMatrixToolStripMenuItem,
+            this.configureModelMatrixToolStripMenuItem
+                //
+            });
             this.loadFromToolStripMenuItem.Name = "loadFromToolStripMenuItem";
-            this.loadFromToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadFromToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.loadFromToolStripMenuItem.Text = "Load From";
             this.loadFromToolStripMenuItem.Click += new System.EventHandler(this.loadFromToolStripMenuItem_Click);
             // 
@@ -368,6 +387,54 @@ namespace NetworkGUI
             this.vnonSymmetricToolStripMenuItem.Text = "Non-symmetric";
             this.vnonSymmetricToolStripMenuItem.Click += new System.EventHandler(this.vnonsymmetricToolStripMenuItem_Click);
             // 
+            // Yushan | globalRandomMatrixToolStripMenuItem
+            // 
+            this.globalRandomMatrixToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.directedGlobalRandomToolStripMenuItem,
+            this.undirectedGlobalRandomToolStripMenuItem});
+            this.globalRandomMatrixToolStripMenuItem.Name = "globalRandomMatrixToolStripMenuItem";
+            this.globalRandomMatrixToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.globalRandomMatrixToolStripMenuItem.Text = "Global Randomization";
+            // 
+            // Yushan | directedGlobalRandomToolStripMenuItem
+            // 
+            this.directedGlobalRandomToolStripMenuItem.Name = "directedGlobalRandomToolStripMenuItem";
+            // this.directedGlobalRandomToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+            this.directedGlobalRandomToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.directedGlobalRandomToolStripMenuItem.Text = "Directed";
+            this.directedGlobalRandomToolStripMenuItem.Click += new System.EventHandler(this.globalDirectedToolStripMenuItem_Click);
+            // 
+            // Yushan | undirectedGlobalRandomToolStripMenuItem
+            // 
+            this.undirectedGlobalRandomToolStripMenuItem.Name = "undirectedGlobalRandomToolStripMenuItem";
+            this.undirectedGlobalRandomToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.undirectedGlobalRandomToolStripMenuItem.Text = "Undirected";
+            this.undirectedGlobalRandomToolStripMenuItem.Click += new System.EventHandler(this.globalUndirectedToolStripMenuItem_Click);
+            // 
+            // Yushan | configureModelMatrixToolStripMenuItem
+            // 
+            this.configureModelMatrixToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.directedConfigureModelToolStripMenuItem,
+            this.undirectedConfigureModelToolStripMenuItem});
+            this.configureModelMatrixToolStripMenuItem.Name = "configureModelMatrixToolStripMenuItem";
+            this.configureModelMatrixToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.configureModelMatrixToolStripMenuItem.Text = "Configuration Models";
+            // 
+            // Yushan | directedConfigureModelToolStripMenuItem
+            // 
+            this.directedConfigureModelToolStripMenuItem.Name = "directedConfigureModelToolStripMenuItem";
+            // this.directedGlobalRandomToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+            this.directedConfigureModelToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.directedConfigureModelToolStripMenuItem.Text = "Directed";
+            this.directedConfigureModelToolStripMenuItem.Click += new System.EventHandler(this.configModelDirectedToolStripMenuIem_Click);
+            // 
+            // Yushan | undirectedConfigureModelToolStripMenuItem
+            // 
+            this.undirectedConfigureModelToolStripMenuItem.Name = "undirectedConfigureModelToolStripMenuItem";
+            this.undirectedConfigureModelToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.undirectedConfigureModelToolStripMenuItem.Text = "Undirected";
+            this.undirectedConfigureModelToolStripMenuItem.Click += new System.EventHandler(this.configModelUndirectedToolStripMenuIem_Click);
+            // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -380,7 +447,7 @@ namespace NetworkGUI
             this.affiliationFileToolStripMenuItem1,
             this.tableToolStripMenuItem});
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
             // 
             // dyadicFileToolStripMenuItem1
@@ -442,21 +509,21 @@ namespace NetworkGUI
             // closeFileToolStripMenuItem
             // 
             this.closeFileToolStripMenuItem.Name = "closeFileToolStripMenuItem";
-            this.closeFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeFileToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.closeFileToolStripMenuItem.Text = "Close File";
             this.closeFileToolStripMenuItem.Click += new System.EventHandler(this.closeFileToolStripMenuItem_Click);
             // 
             // resetToolStripMenuItem
             // 
             this.resetToolStripMenuItem.Name = "resetToolStripMenuItem";
-            this.resetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.resetToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.resetToolStripMenuItem.Text = "Reset Program";
             this.resetToolStripMenuItem.Click += new System.EventHandler(this.resetToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -1948,6 +2015,18 @@ namespace NetworkGUI
         private System.Windows.Forms.ToolStripMenuItem affiliationFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem monadicDiagonalFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem randomMatrixToolStripMenuItem;
+        // Yushan 
+        // Global Randomization
+        private System.Windows.Forms.ToolStripMenuItem globalRandomMatrixToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem directedGlobalRandomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem undirectedGlobalRandomToolStripMenuItem;
+        //
+        // Configuration Models
+        private System.Windows.Forms.ToolStripMenuItem configureModelMatrixToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem directedConfigureModelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem undirectedConfigureModelToolStripMenuItem;
+        //
+        //
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dyadicFileToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem matrixFileToolStripMenuItem1;
