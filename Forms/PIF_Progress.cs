@@ -133,5 +133,10 @@ namespace NetworkGUI.Forms
         {
 
         }
+
+        private void ProgressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

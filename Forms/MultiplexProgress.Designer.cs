@@ -47,6 +47,7 @@
             this.ClientSize = new System.Drawing.Size(284, 73);
             this.Controls.Add(this.progressBar1);
             this.Name = "MultiplexProgress";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "MultiplexProgress";
             this.ResumeLayout(false);
 
