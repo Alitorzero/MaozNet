@@ -37,7 +37,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -116,6 +116,12 @@
     <Compile Include="Forms\Communities\CommCalculations.cs" />
     <Compile Include="Forms\Communities\CommCollection.cs" />
     <Compile Include="Forms\Communities\CommException.cs" />
+    <Compile Include="Forms\ConfigurationModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigurationModel.designer.cs">
+      <DependentUpon>ConfigurationModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DichotomizeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,18 @@
     </Compile>
     <Compile Include="Forms\ABMProgressForm.Designer.cs">
       <DependentUpon>ABMProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PathBasedImbalance_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PathBasedImbalance_V2.Designer.cs">
+      <DependentUpon>PathBasedImbalance_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GlobalRandomization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GlobalRandomization.designer.cs">
+      <DependentUpon>GlobalRandomization.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MatMultForm.cs">
       <SubType>Form</SubType>
@@ -549,6 +567,9 @@
     <EmbeddedResource Include="Forms\ClusteringForm.resx">
       <DependentUpon>ClusteringForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigurationModel.resx">
+      <DependentUpon>ConfigurationModel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DichotomizeForm.resx">
       <DependentUpon>DichotomizeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -560,6 +581,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ABMProgressForm.resx">
       <DependentUpon>ABMProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PathBasedImbalance_V2.resx">
+      <DependentUpon>PathBasedImbalance_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GlobalRandomization.resx">
+      <DependentUpon>GlobalRandomization.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MatMultForm.resx">
       <DependentUpon>MatMultForm.cs</DependentUpon>
